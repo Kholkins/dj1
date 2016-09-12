@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, User
 
 
 class PostForm(forms.ModelForm):
@@ -10,5 +10,5 @@ class PostForm(forms.ModelForm):
 
 class UserForm(forms.ModelForm):
     class Meta:
-        model = Post
-        fields = ('author', 'text',)
+        model = User
+        fields = ('user', 'password',)
